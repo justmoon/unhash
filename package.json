@@ -1,6 +1,6 @@
 {
   "name": "unhash",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Simple NPM module to undo/reverse a SHA-256 hash (sometimes)",
   "main": "index.js",
   "scripts": {
