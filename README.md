@@ -5,7 +5,7 @@ This module exports a function which accepts a SHA-256 hash as a hex-, base64- o
 ``` js
 const unhash = require('unhash')
 
-unhash('13550350a8681c84c861aac2e5b440161c2b33a3e4f302ac680ca5b686de48de')
+unhash('UNhY4JhezH9gQYqvDMWrWH9CwlcKiECVqejMrND2VFw')
   .then(
     preimage => console.log(preimage.toString('utf8')),
     err => console.error(err)
