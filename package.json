@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/justmoon/unhash/issues"
   },
-  "homepage": "https://github.com/justmoon/unhash#readme"
+  "homepage": "https://github.com/justmoon/unhash#readme",
+  "dependencies": {
+    "debug": "^2.6.0"
+  }
 }
