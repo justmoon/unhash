@@ -2,6 +2,7 @@
 
 const https = require('https')
 const debug = require('debug')('unhash')
+const crypto = require('crypto')
 
 const HOSTS = [
   'unhash.link'
@@ -31,6 +32,7 @@ module.exports = hash => {
     throw new Error('Hash is invalid type: ' + typeof hash)
   }
 
+  const expectedHash = hash
   const base64Hash = base64url(hash)
 
   debug('requesting %s from %d hosts', base64Hash, HOSTS.length)
@@ -38,10 +40,17 @@ module.exports = hash => {
     return new Promise((resolve, reject) => {
       https.get(`https://${host}/${base64Hash}`, res => {
         const data = []
+        const hash = crypto.createHash('sha256')
 
         debug('received reply from %s', host)
-        res.on('data', chunk => data.push(chunk) )
-        res.on('end', () => resolve(Buffer.concat(data)))
+        res.on('data', chunk => { data.push(chunk); hash.update(chunk) } )
+        res.on('end', () => {
+          if (expectedHash.compare(hash.digest()) === 0) {
+            resolve(Buffer.concat(data))
+          } else  {
+            reject(new Error('Hash did not match'))
+          }
+        })
       })
     })
   }))
