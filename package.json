@@ -1,0 +1,31 @@
+{
+  "name": "unhash",
+  "version": "0.0.0",
+  "description": "Simple NPM module to undo/reverse a SHA-256 hash (sometimes)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justmoon/unhash.git"
+  },
+  "keywords": [
+    "undo",
+    "hash",
+    "reverse",
+    "rainbow",
+    "distributed",
+    "filesharing",
+    "filesystem",
+    "sha",
+    "sha256",
+    "sha2"
+  ],
+  "author": "Stefan Thomas <justmoon@members.fsf.org>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/justmoon/unhash/issues"
+  },
+  "homepage": "https://github.com/justmoon/unhash#readme"
+}
