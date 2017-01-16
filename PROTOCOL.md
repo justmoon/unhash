@@ -54,7 +54,9 @@ like [IPFS](https://ipfs.io) may be used.
 
 ## Participants
 
-The Unhash Protocol defines two roles:
+![Downloaders and Uploaders interact with a Server](docs/assets/roles.svg)
+
+The Unhash Protocol defines three roles:
 
 * **Uploader**
 
