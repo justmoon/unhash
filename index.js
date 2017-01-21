@@ -5,7 +5,8 @@ const debug = require('debug')('unhash')
 const crypto = require('crypto')
 
 const HOSTS = [
-  'unhash.link'
+  // 'unhash.link'
+  'unhash.s3.amazonaws.com'
 ]
 
 const base64url = buffer => (
